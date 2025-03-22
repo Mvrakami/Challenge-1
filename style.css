@@ -1,0 +1,102 @@
+
+/*   Variáveis utilizadas no projeto [var(--cor1)]   */
+:root{
+    --cor1: white;
+    --cor2: #D5E1EF;
+    --cor3: #68778d;
+    --cor4: #1f3251;
+
+    --font: "Manrope"; 
+}
+
+body{
+    font-family: var(--font);
+    margin: 0;
+}
+
+img{
+    border-radius: 10px;
+    width: 320px;
+}
+
+#container{
+      background-color: var(--cor2);
+      height: 98vh;
+      position: relative; /* a tag pai vai ter como config. padrão position: relative.
+      na tag descendente, para a img ficar fixa, position:absolut (EM RELACAO AO PAI) */
+}
+
+#conteúdo{
+      background-color: white;
+      width: 320px;
+      padding: 15px;
+      border-radius: 10px;
+      position: absolute; /* tento o parametro ABSOLUTE, aceita modificações em LETF e TOP, devem ser associados com transfor:translate (porcentagem nos dois eixos,(dois valores %) */
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+}
+
+#conteúdo > div > h1{
+      color: var(--cor4);
+      font-size: 1.4rem;
+}
+
+#conteúdo > div > p{
+      color: var(--cor3);
+      font-size: .8rem;
+    }
+
+#conteúdo > div{
+      text-align: center;
+      margin-top: 1rem;
+}
+
+@media (max-width: 375px) { 
+    /* ____trabalhar sempre com 3 escalas, tomando como ponto de partida as medidas do projeto original, alterando para menos (mobile) e para mais nos outros dispositivos*/
+    /*____ altera-se apenas elementos de */
+
+
+    #conteúdo {
+        width: 95%; /* Aumenta a largura para telas pequenas */
+        padding: 10px; /* Reduz o padding de 15 para 10px*/
+    }
+
+    #conteúdo > div > h1 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do título de 1.4 para 1.2rem */
+    }
+
+    #conteúdo > div > p {
+        font-size: 0.7rem; /* Reduz o tamanho da fonte do texto de 0.8 para 0.7rem */
+    }
+}
+
+/* Telas médias (tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #conteúdo {
+        max-width: 400px; /* Aumenta a largura máxima de 320 para 400px */
+    }
+
+    #conteúdo > div > h1 {
+        font-size: 1.6rem; /* Aumenta o tamanho da fonte do título de 1.5 para 1.6rem */
+    }
+
+    #conteúdo > div > p {
+        font-size: 0.9rem; /* Aumenta o tamanho da fonte do texto de .8 para .9rem*/
+    }
+}
+
+/* Telas grandes (desktop) */
+@media (min-width: 1024px) {
+    #conteúdo {
+        max-width: 500px; 
+    }
+
+    #conteúdo > div > h1 {
+        font-size: 1.7rem; 
+    }
+
+    #conteúdo > div > p {
+        font-size: 1rem; 
+    }
+}
