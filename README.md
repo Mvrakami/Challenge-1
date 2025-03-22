@@ -22,8 +22,7 @@ I had to create a webpage that shows a QRcode. I tryed to apply media queries an
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://mvrakami.github.io/Challenge-1/]
 
 ## My process
 
